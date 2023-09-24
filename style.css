@@ -10,8 +10,14 @@ h2 {
 
 .grid {
     display: flex;
+    flex-wrap: wrap;
     width: 500px;
     height: 500px;
+    box-sizing: border-box;
+    align-content: flex-start;
+}
+
+.box {
     outline: black solid 1px;
 }
 
