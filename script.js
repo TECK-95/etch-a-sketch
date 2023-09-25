@@ -1,3 +1,4 @@
+const container = document.querySelector(".container");
 const grid = document.querySelector(".grid");
 
 let dimensions = 16;
@@ -22,6 +23,10 @@ function resetGrid() {
     let dimensions = newGridSize;
     let boxes = dimensions * dimensions;
     let gridSize = 500;
+    const container = document.querySelector(".container");
+    const grid = document.createElement("div");
+    grid.classList.add("grid");
+    container.appendChild(grid);
     for (i=1;i<=boxes;i++) {
         const box = document.createElement("div");
         box.classList.add("box");
@@ -37,7 +42,16 @@ function resetGrid() {
     })
 }
 
+const clear = document.querySelector(".clear");
+function clearGrid() {
+    const container = document.querySelector(".container");
+    const grid = document.querySelector(".grid");
+    container.removeChild(grid);
+    return
+}
+
 newGrid.addEventListener("click", resetGrid);
+clear.addEventListener("click", clearGrid);
 const gridBoxes = document.querySelectorAll(".box");
 gridBoxes.forEach((box) => {
     box.addEventListener("mouseover", function(e) {
