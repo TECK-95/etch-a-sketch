@@ -11,3 +11,10 @@ for (i=1;i<=boxes;i++) {
     box.style.width = gridSize/dimensions + "px";
     grid.appendChild(box);
 }
+
+const gridBoxes = document.querySelectorAll(".box");
+gridBoxes.forEach((box) => {
+    box.addEventListener("mouseover", function(e) {
+        e.target.style.backgroundColor = "black";
+    })
+})
