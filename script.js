@@ -18,3 +18,11 @@ gridBoxes.forEach((box) => {
         e.target.style.backgroundColor = "black";
     })
 })
+
+const newGrid = document.querySelector(".new");
+function resetGrid() {
+    let newGridSize = parseInt(prompt("Choose a number up to 100 for a new grid:"));
+    if (newGridSize > 100) {
+        alert("Please choose a valid number");
+    }
+}
